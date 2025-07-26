@@ -1,0 +1,64 @@
+@import "../../../styles/theme";
+
+#about-me-work-history {
+  position: relative;
+  width: 100%;
+
+  .records {
+    padding-bottom: 40px;
+    position: relative;
+    .arrow {
+      position: absolute;
+      background-color: $primary-white;
+      width: 3px;
+      height: 100%;
+      margin-bottom: 5px;
+      border-radius: 1.5px;
+      left: 50%;
+      transform: translateX(-50%);
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: -4.7px;
+        content: "";
+        border: solid $primary-white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(45deg);
+      }
+    }
+
+    .record {
+      width: 50%;
+      position: relative;
+      text-align: right;
+      &:nth-child(even) {
+        margin-left: auto;
+        text-align: left;
+        padding-left: 3%;
+      }
+      &:nth-child(odd) {
+        padding-right: 3%;
+      }
+      p {
+        margin: 0;
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $primary-white;
+        right: -5px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:nth-child(even)::after {
+        left: -5px;
+      }
+    }
+  }
+}
