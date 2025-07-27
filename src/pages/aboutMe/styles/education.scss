@@ -1,0 +1,51 @@
+@import "../../../styles/theme";
+
+#about-me-education {
+  .records {
+    padding-bottom: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+
+    .arrow {
+      position: absolute;
+      background-color: $primary-white;
+      width: 95%;
+      height: 3px;
+      border-radius: 1.5px;
+      right: 0;
+
+      &::after {
+        position: absolute;
+        bottom: -4.7px;
+        right: 0;
+        content: "";
+        border: solid $primary-white;
+        border-width: 0 3px 3px 0;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .record {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      padding-top: 20px;
+      max-width: 100px;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $primary-white;
+        right: 50%;
+        top: -3.8%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+}

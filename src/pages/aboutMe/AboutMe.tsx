@@ -4,6 +4,8 @@ import Title from "./Title.tsx";
 import Intro from "./Intro.tsx";
 import WorkHistory from "./WorkHistory.tsx";
 import Technologies from "./Technologies.tsx";
+import Languages from "./Languages.tsx";
+import Education from "./Education.tsx";
 
 export default function AboutMe() {
   return (
@@ -16,6 +18,8 @@ export default function AboutMe() {
         </div>
         <div className="column">
           <Technologies />
+          <Languages />
+          <Education />
         </div>
       </div>
     </Page>

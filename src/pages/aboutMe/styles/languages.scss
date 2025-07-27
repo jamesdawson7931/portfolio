@@ -1,0 +1,34 @@
+@import "../../../styles/theme";
+
+#about-me-languages {
+  .languages {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    .language {
+      display: flex;
+      align-items: center;
+      .language-title {
+      }
+
+      .dot-row {
+        display: flex;
+        flex: 1;
+        column-gap: 16px;
+        justify-content: flex-end;
+
+        .dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: transparent;
+          border: 1px solid $primary-white;
+
+          &.selected {
+            background-color: $primary-white;
+          }
+        }
+      }
+    }
+  }
+}
