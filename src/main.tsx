@@ -4,7 +4,7 @@ import "./styles/index.scss";
 import App from "./app/App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutMe from "./pages/aboutMe/AboutMe.tsx";
-import GetInTouch from "./pages/GetInTouch.tsx";
+import GetInTouch from "./pages/getInTouch/GetInTouch.tsx";
 import Projects from "./pages/Projects.tsx";
 
 const router = createBrowserRouter([

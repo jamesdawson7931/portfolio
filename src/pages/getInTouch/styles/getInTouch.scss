@@ -1,0 +1,12 @@
+#page {
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: 100vh;
+  .content {
+  }
+}
+
+@media (max-aspect-ratio: 1.4/1) {
+  #page {
+  }
+}
