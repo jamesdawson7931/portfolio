@@ -1,21 +1,21 @@
 @use "../../../styles/theme";
 
-#about-me-technologies {
+#about-me-other-interests {
   .icons {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-    .technology {
+    .interest {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: fit-content;
       row-gap: 4px;
-      .technology-icon {
+      .interest-icon {
         color: theme.$primary-white;
         font-size: 48px;
       }
-      .technology-title {
+      .interest-title {
         font-size: 12px;
       }
     }

@@ -1,9 +1,9 @@
-@import "../../../styles/theme";
+@use "../../../styles/theme";
 
 #navbar {
   display: flex;
   flex-direction: column;
-  background-color: $navbar-gray;
+  background-color: theme.$navbar-gray;
   height: 100vh;
   padding: 0;
 }

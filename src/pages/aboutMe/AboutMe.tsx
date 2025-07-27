@@ -6,6 +6,7 @@ import WorkHistory from "./WorkHistory.tsx";
 import Technologies from "./Technologies.tsx";
 import Languages from "./Languages.tsx";
 import Education from "./Education.tsx";
+import OtherInterests from "./OtherInterests.tsx";
 
 export default function AboutMe() {
   return (
@@ -20,6 +21,7 @@ export default function AboutMe() {
           <Technologies />
           <Languages />
           <Education />
+          <OtherInterests />
         </div>
       </div>
     </Page>

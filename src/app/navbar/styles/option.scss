@@ -1,4 +1,4 @@
-@import "../../../styles/theme";
+@use "../../../styles/theme";
 
 #navbar {
   .option {
@@ -9,11 +9,11 @@
     justify-content: center;
     svg {
       font-size: 26px;
-      color: $navbar-dark-icon;
+      color: theme.$navbar-dark-icon;
     }
     &:last-of-type {
       margin-top: auto;
-      border-top: solid 1px $navbar-dark-icon;
+      border-top: solid 1px theme.$navbar-dark-icon;
     }
   }
 }

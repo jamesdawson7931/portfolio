@@ -1,4 +1,4 @@
-@import "../../../styles/theme";
+@use "../../../styles/theme";
 
 #about-me-languages {
   .languages {
@@ -22,10 +22,10 @@
           height: 8px;
           border-radius: 50%;
           background-color: transparent;
-          border: 1px solid $primary-white;
+          border: 1px solid theme.$primary-white;
 
           &.selected {
-            background-color: $primary-white;
+            background-color: theme.$primary-white;
           }
         }
       }

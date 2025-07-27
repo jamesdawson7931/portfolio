@@ -1,4 +1,4 @@
-@import "../../../styles/theme";
+@use "../../../styles/theme";
 
 #about-me-work-history {
   position: relative;
@@ -9,7 +9,7 @@
     position: relative;
     .arrow {
       position: absolute;
-      background-color: $primary-white;
+      background-color: theme.$primary-white;
       width: 3px;
       height: 100%;
       margin-bottom: 5px;
@@ -21,7 +21,7 @@
         bottom: 0;
         left: -4.7px;
         content: "";
-        border: solid $primary-white;
+        border: solid theme.$primary-white;
         border-width: 0 3px 3px 0;
         display: inline-block;
         padding: 5px;
@@ -50,7 +50,7 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: $primary-white;
+        background-color: theme.$primary-white;
         right: -5px;
         top: 50%;
         transform: translateY(-50%);
