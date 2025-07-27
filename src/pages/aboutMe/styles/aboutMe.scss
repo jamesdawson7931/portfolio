@@ -7,12 +7,20 @@
     justify-content: space-between;
     column-gap: 86px;
     width: 100%;
-    padding: 150px 300px;
+    padding: 10% 20%;
     .column {
       display: flex;
       flex-direction: column;
       row-gap: 8px;
       flex: 1;
+    }
+  }
+}
+
+@media (max-aspect-ratio: 1.4/1) {
+  #page {
+    .content {
+      flex-direction: column;
     }
   }
 }
