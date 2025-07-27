@@ -1,7 +1,10 @@
-#page {
+@use "../../../styles/mixins";
+
+#page.about-me-page {
   overflow-x: hidden;
   overflow-y: auto;
   max-height: 100vh;
+  @include mixins.scrollbar();
   .content {
     display: flex;
     justify-content: space-between;

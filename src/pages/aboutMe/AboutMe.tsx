@@ -10,7 +10,7 @@ import OtherInterests from "./OtherInterests.tsx";
 
 export default function AboutMe() {
   return (
-    <Page>
+    <Page className={"about-me-page"}>
       <div className={"content"}>
         <div className="column">
           <Title />

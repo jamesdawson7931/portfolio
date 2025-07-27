@@ -1,0 +1,20 @@
+@use "../../styles/theme";
+
+#page.get-in-touch-sent-page {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10% 20%;
+  .content {
+    max-width: 400px;
+    .title {
+      color: theme.$accent;
+      font-size: 56px;
+      margin: 0 0 12px;
+    }
+
+    .message {
+    }
+  }
+}

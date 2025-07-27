@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutMe from "./pages/aboutMe/AboutMe.tsx";
 import GetInTouch from "./pages/getInTouch/GetInTouch.tsx";
 import Projects from "./pages/Projects.tsx";
+import GetInTouchSent from "./pages/GetInTouchSent.tsx";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "/", element: <AboutMe /> },
       { path: "/aboutme", element: <AboutMe /> },
       { path: "/getintouch", element: <GetInTouch /> },
+      { path: "/getintouch/sent", element: <GetInTouchSent /> },
       { path: "/projects", element: <Projects /> },
     ],
   },

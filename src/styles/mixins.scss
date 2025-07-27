@@ -1,0 +1,25 @@
+@use "./theme";
+
+@mixin scrollbar() {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 100%;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: theme.$input-gray;
+    border-radius: 4px;
+    border: 2px solid transparent; // optional padding effect
+    background-clip: content-box;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: theme.$primary-gray;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-button:increment,
+  &::-webkit-scrollbar-button:decrement {
+    width: 0;
+    height: 0;
+    display: none;
+  }
+}

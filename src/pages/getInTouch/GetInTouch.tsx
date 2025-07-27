@@ -6,7 +6,7 @@ import Message from "./Message.tsx";
 
 export default function GetInTouch() {
   return (
-    <Page>
+    <Page className={"get-in-touch-page"}>
       <div className={"content"}>
         <div className={"top-container"}>
           <Title />
