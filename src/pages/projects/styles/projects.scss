@@ -1,0 +1,17 @@
+.projects-desktop-version-page {
+  display: block;
+}
+
+.projects-mobile-version-page {
+  display: none;
+}
+
+@media (max-aspect-ratio: 1.4/1) {
+  .projects-desktop-version-page {
+    display: none;
+  }
+
+  .projects-mobile-version-page {
+    display: block;
+  }
+}

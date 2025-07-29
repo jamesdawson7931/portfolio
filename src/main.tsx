@@ -5,7 +5,7 @@ import App from "./app/App.tsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import AboutMe from "./pages/aboutMe/AboutMe.tsx";
 import GetInTouch from "./pages/getInTouch/GetInTouch.tsx";
-import Projects from "./pages/Projects.tsx";
+import Projects from "./pages/projects/Projects.tsx";
 import GetInTouchSent from "./pages/GetInTouchSent.tsx";
 import { ProjectProvider } from "./context/ProjectProvider.tsx";
 
