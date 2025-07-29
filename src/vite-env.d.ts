@@ -8,3 +8,8 @@ declare module "*.svg?react" {
   >;
   export default ReactComponent;
 }
+
+declare module "*.txt?raw" {
+  const value: string;
+  export default value;
+}
