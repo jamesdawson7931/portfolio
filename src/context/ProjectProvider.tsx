@@ -1,6 +1,5 @@
 import { createContext, type ReactNode, useState } from "react";
-import projectsData from "../projects/projects.ts";
-import type { Project } from "../projects/lorem";
+import projectsData, { type Project } from "../projects/projects.ts";
 
 export const ProjectContext = createContext<Project[]>(projectsData);
 
