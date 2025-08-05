@@ -1,17 +1,20 @@
 import Page from "../../Page.tsx";
-import { useContext } from "react";
-import { ProjectContext } from "../../../context/ProjectProvider.tsx";
-import ProjectMenu from "./ProjectMenu.tsx";
-import ExpandedPreview from "./ExpandedPreview.tsx";
+import ProjectMenu from "./projectMenu/ProjectMenu.tsx";
+import ExpandedPreview from "./expandedPreview/ExpandedPreview.tsx";
+import { previews } from "./projectData/projectPreviews.ts";
+import { useState } from "react";
+
+const previewIds = previews.map((preview) => preview.id);
 
 export function ProjectsDesktopVersion() {
-  const { projects, selectedProject, setSelectedProject } =
-    useContext(ProjectContext);
-  console.log(selectedProject);
+  const [selectedProject, setSelectedProject] = useState(previewIds[0]);
 
   return (
     <Page className={"projects-desktop-version-page"}>
-      <ProjectMenu />
+      <ProjectMenu
+        selectedProject={selectedProject}
+        onSelect={(selectedProjectId) => setSelectedProject(selectedProjectId)}
+      />
       <ExpandedPreview />
     </Page>
   );

@@ -9,6 +9,8 @@ h5,
 h6 {
   font-family: "Krub", sans-serif;
   color: theme.$primary-white;
+  font-weight: 600;
+  letter-spacing: 0.6px;
 }
 
 p,
@@ -16,6 +18,7 @@ article {
   font-family: "Inter", sans-serif;
   color: theme.$primary-white;
   margin: 0;
+  letter-spacing: 0.3px;
 }
 
 * {

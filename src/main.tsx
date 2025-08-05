@@ -7,7 +7,6 @@ import AboutMe from "./pages/aboutMe/AboutMe.tsx";
 import GetInTouch from "./pages/getInTouch/GetInTouch.tsx";
 import Projects from "./pages/projects/Projects.tsx";
 import GetInTouchSent from "./pages/GetInTouchSent.tsx";
-import { ProjectProvider } from "./context/ProjectProvider.tsx";
 
 const router = createBrowserRouter([
   {
@@ -25,8 +24,6 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ProjectProvider>
-      <RouterProvider router={router} />
-    </ProjectProvider>
+    <RouterProvider router={router} />
   </StrictMode>,
 );

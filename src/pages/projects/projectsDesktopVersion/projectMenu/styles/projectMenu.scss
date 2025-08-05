@@ -1,0 +1,7 @@
+@use "../../../../../styles/theme";
+
+.project-menu {
+  background-color: theme.$project-menu-gray;
+  max-width: 500px;
+  height: 100vh;
+}
