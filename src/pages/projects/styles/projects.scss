@@ -1,17 +1,17 @@
-.projects-desktop-version-page {
-  display: block;
+#page.projects-desktop-version-page {
+  display: flex !important;
 }
 
-.projects-mobile-version-page {
-  display: none;
+#page.projects-mobile-version-page {
+  display: none !important;
 }
 
 @media (max-aspect-ratio: 1.4/1) {
-  .projects-desktop-version-page {
-    display: none;
+  #page.projects-desktop-version-page {
+    display: none !important;
   }
 
-  .projects-mobile-version-page {
-    display: block;
+  #page.projects-mobile-version-page {
+    display: flex !important;
   }
 }

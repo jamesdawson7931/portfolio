@@ -1,0 +1,48 @@
+@use "../../../../styles/theme";
+
+.preview {
+  .preview-card {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4px;
+    background-color: theme.$project-menu-gray;
+    padding: 30px 50px;
+    &.selected {
+      background-color: theme.$primary-gray;
+      & .title {
+        color: theme.$accent;
+      }
+      & .description {
+        color: theme.$primary-white;
+      }
+    }
+    .title {
+      margin: 0;
+    }
+    .date-created {
+      font-size: 12px;
+    }
+    .short-intro {
+      font-size: 12px;
+      color: theme.$input-gray;
+    }
+  }
+  .full-preview {
+    .preview-image {
+      width: 500px;
+      height: 500px;
+      object-fit: cover;
+    }
+    .long-intro {
+    }
+    .read-on-button {
+      background-color: theme.$accent;
+      color: theme.$primary-white;
+      padding: 4px 48px;
+      font-size: 14px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+    }
+  }
+}

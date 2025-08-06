@@ -1,0 +1,19 @@
+@use "../../../../styles/theme";
+
+.menu-burger {
+  color: theme.$navbar-dark-icon;
+}
+
+.screen-overlay {
+  background-color: theme.$project-menu-gray;
+}
+
+#page.projects-mobile-version-page {
+  width: 100vw;
+  max-width: 100vh;
+  margin: 0 auto;
+  overflow-y: auto;
+  background-color: theme.$project-menu-gray;
+  display: flex;
+  flex-direction: column;
+}

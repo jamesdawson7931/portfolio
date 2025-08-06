@@ -18,7 +18,7 @@ export default function Preview({
     <div className={"preview"}>
       <img alt={title} src={imageUrl} className={"preview-image"} />
       <article className="description">{description}</article>
-      <Link className="read-on-button" to={`${id}`}>
+      <Link className="read-on-button" to={id}>
         Read on
       </Link>
     </div>
