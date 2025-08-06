@@ -1,3 +1,4 @@
+import "./styles/projectsDesktopVersion.scss";
 import Page from "../../Page.tsx";
 import ProjectMenu from "./projectMenu/ProjectMenu.tsx";
 import ExpandedPreview from "./expandedPreview/ExpandedPreview.tsx";
@@ -15,7 +16,7 @@ export function ProjectsDesktopVersion() {
         selectedProject={selectedProject}
         onSelect={(selectedProjectId) => setSelectedProject(selectedProjectId)}
       />
-      <ExpandedPreview />
+      <ExpandedPreview selectedProjectId={selectedProject} />
     </Page>
   );
 }

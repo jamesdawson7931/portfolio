@@ -1,0 +1,26 @@
+@use "../../../../../styles/theme";
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  row-gap: 8px;
+  width: 500px;
+  .preview-image {
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+  }
+  .description {
+    font-size: 12px;
+  }
+  .read-on-button {
+    background-color: theme.$accent;
+    color: theme.$primary-white;
+    padding: 4px 48px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+  }
+}
