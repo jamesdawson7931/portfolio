@@ -1,63 +1,79 @@
 @use "../../../../styles/theme";
 
-.preview {
-  width: 100%;
-  padding: 50px 15vw;
-  .preview-card {
-    display: flex;
+#page.projects-mobile-version-page {
+  .preview {
     width: 100%;
-    flex-direction: column;
-    row-gap: 4px;
-    &.selected {
-      padding-bottom: 50px;
-      & .title {
-        color: theme.$accent;
+    padding: 50px 15vw;
+
+    .preview-card {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      row-gap: 4px;
+
+      &.selected {
+        padding-bottom: 50px;
+
+        & .title {
+          color: theme.$accent;
+        }
+
+        & .short-intro {
+          color: theme.$primary-white;
+        }
       }
-      & .short-intro {
+
+      .title {
+        margin: 0;
+      }
+
+      .date-created {
+        font-size: 12px;
+      }
+
+      .short-intro {
+        font-size: 12px;
+        color: theme.$input-gray;
+      }
+    }
+
+    .full-preview {
+      overflow: hidden;
+      height: 0;
+      display: flex;
+      flex-direction: column;
+      row-gap: 12px;
+
+      .preview-image {
+        width: 70vw;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+        max-width: 100%;
+      }
+
+      .long-intro {
+        font-size: 12px;
+      }
+
+      .read-on-button {
+        background-color: theme.$accent;
         color: theme.$primary-white;
+        padding: 4px 48px;
+        font-size: 14px;
+        border-radius: 4px;
+        text-decoration: none;
+        font-weight: 500;
+        width: fit-content;
+        align-self: flex-end;
+      }
+
+      &.selected {
+        height: auto;
       }
     }
-    .title {
-      margin: 0;
-    }
-    .date-created {
-      font-size: 12px;
-    }
-    .short-intro {
-      font-size: 12px;
-      color: theme.$input-gray;
-    }
-  }
-  .full-preview {
-    overflow: hidden;
-    height: 0;
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-    .preview-image {
-      width: 70vw;
-      height: 70vw;
-      object-fit: cover;
-    }
-    .long-intro {
-      font-size: 12px;
-    }
-    .read-on-button {
-      background-color: theme.$accent;
-      color: theme.$primary-white;
-      padding: 4px 48px;
-      font-size: 14px;
-      border-radius: 4px;
-      text-decoration: none;
-      font-weight: 500;
-      width: fit-content;
-      align-self: flex-end;
-    }
+
     &.selected {
-      height: auto;
+      background-color: theme.$primary-gray;
     }
-  }
-  &.selected {
-    background-color: theme.$primary-gray;
   }
 }

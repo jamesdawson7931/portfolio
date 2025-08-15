@@ -1,8 +1,10 @@
 @use "../../../../../styles/theme";
 
-.project-menu {
-  background-color: theme.$project-menu-gray;
-  max-width: 500px;
-  min-width: 500px;
-  height: 100vh;
+#page.projects-desktop-version-page {
+  .project-menu {
+    background-color: theme.$project-menu-gray;
+    max-width: 500px;
+    min-width: 500px;
+    height: 100vh;
+  }
 }

@@ -1,6 +1,8 @@
-.expanded-preview {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+#page.projects-desktop-version-page {
+  .expanded-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
 }

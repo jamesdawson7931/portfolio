@@ -1,12 +1,16 @@
 @use "../../../../../styles/theme";
 
-.project-menu-title {
-  padding: 48px;
-  .title {
-    margin: 0;
-    color: theme.$accent;
-  }
-  .subtitle {
-    font-size: 12px;
+#page.projects-desktop-version-page {
+  .project-menu-title {
+    padding: 48px;
+
+    .title {
+      margin: 0;
+      color: theme.$accent;
+    }
+
+    .subtitle {
+      font-size: 12px;
+    }
   }
 }

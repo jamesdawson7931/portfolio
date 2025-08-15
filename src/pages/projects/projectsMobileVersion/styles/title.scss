@@ -1,14 +1,17 @@
 @use "../../../../styles/theme";
 
-.project-menu-title {
-  padding: 100px 15vw 30px;
+#page.projects-mobile-version-page {
+  .project-menu-title {
+    padding: 100px 15vw 30px;
 
-  .title {
-    margin: 0;
-    color: theme.$accent;
-    font-size: 48px;
-  }
-  .subtitle {
-    font-size: 12px;
+    .title {
+      margin: 0;
+      color: theme.$accent;
+      font-size: 48px;
+    }
+
+    .subtitle {
+      font-size: 12px;
+    }
   }
 }
