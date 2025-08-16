@@ -7,6 +7,7 @@ import AboutMe from "./pages/aboutMe/AboutMe.tsx";
 import GetInTouch from "./pages/getInTouch/GetInTouch.tsx";
 import Projects from "./pages/projects/Projects.tsx";
 import GetInTouchSent from "./pages/GetInTouchSent.tsx";
+import Reader from "./pages/reader/Reader.tsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
       { path: "/getintouch", element: <GetInTouch /> },
       { path: "/getintouch/sent", element: <GetInTouchSent /> },
       { path: "/projects", element: <Projects /> },
+      { path: "/projects/:projectName", element: <Reader /> },
     ],
   },
 ]);
