@@ -1,0 +1,24 @@
+#page.reader-page {
+  #reading-panel {
+    #with-reader-nav-controls {
+      #reader-section-frame {
+        #reading-sections {
+          position: absolute;
+          left: -567 * 0px;
+          top: -567px;
+          .reader-sections-strip {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            min-height: 100%;
+            max-height: 100%;
+            .reader-section {
+              background-color: gray;
+              aspect-ratio: 1/1;
+            }
+          }
+        }
+      }
+    }
+  }
+}

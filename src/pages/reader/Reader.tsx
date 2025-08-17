@@ -5,10 +5,13 @@ import ReaderSectionFrame from './ReaderSectionFrame.tsx'
 import { ReaderSections } from './ReaderSections.tsx'
 import { ReaderSectionsStrip } from './ReaderSectionsStrip.tsx'
 import { ReaderSection } from './ReaderSection.tsx'
+import './styles/reader.scss'
+import NavSidePanel from './NavSidePanel.tsx'
 
 export default function Reader() {
   return (
     <Page className={'reader-page'}>
+      <NavSidePanel />
       <ReadingPanel>
         <WithReadingNavControls>
           <ReaderSectionFrame>

@@ -1,0 +1,7 @@
+@use '../../../styles/theme';
+
+#nav-side-panel {
+  min-width: 400px;
+  height: 100%;
+  background-color: theme.$project-menu-gray;
+}

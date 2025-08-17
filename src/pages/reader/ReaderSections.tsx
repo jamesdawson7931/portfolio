@@ -1,28 +1,25 @@
-import { Children, isValidElement, type ReactNode, useEffect } from 'react'
-import type { ReaderSectionsStripProps } from './ReaderSectionsStrip.tsx'
-import type { ReaderSectionProps } from './ReaderSection.tsx'
+import { type ReactNode, useEffect } from 'react'
+import './styles/readerSections.scss'
+import { useReaderIndex } from '../../context/ReaderIndexContext.tsx'
+import { useReaderSectionFrameWidth } from '../../context/ReaderFrameWidthContext.tsx'
 
 interface ReaderSectionsProps {
   children: ReactNode
 }
 
 export function ReaderSections({ children }: ReaderSectionsProps) {
+  const { initReaderIndex, currentReaderIndex } = useReaderIndex()
+  const { width } = useReaderSectionFrameWidth()
+  const topOffset = currentReaderIndex.section * -width
+  const leftOffset = currentReaderIndex.subsection * -width
+
   useEffect(() => {
-    const childrenArray = Children.toArray(children)
-    childrenArray.map((child) => {
-      if (isValidElement<ReaderSectionsStripProps>(child)) {
-        const titleSection = Children.toArray(child.props.titleSection)
-        const subSections = Children.toArray(child.props.children)
-        if (isValidElement<ReaderSectionProps>(titleSection[0])) {
-          console.log(titleSection[0].props.title)
-        }
-        subSections.map((ss) => {
-          if (isValidElement<ReaderSectionProps>(ss)) {
-            console.log(ss.props.title)
-          }
-        })
-      }
-    })
+    initReaderIndex(children)
   }, [])
-  return <div id={'reading-sections'}>{children}</div>
+
+  return (
+    <div id={'reading-sections'} style={{ top: topOffset, left: leftOffset }}>
+      {children}
+    </div>
+  )
 }
