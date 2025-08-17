@@ -158,6 +158,7 @@ export function useReaderIndex() {
       setSubsectionIndex,
       incrementSubsectionIndex,
       decrementSubsectionIndex,
+      setCurrentReaderIndex,
     }
   }, [currentReaderIndex, readerIndex, setCurrentReaderIndex, setReaderIndex])
 }
