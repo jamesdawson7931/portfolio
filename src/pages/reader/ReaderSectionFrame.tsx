@@ -1,6 +1,7 @@
 import { type ReactNode, useEffect, useRef } from 'react'
 import './styles/readerSectionFrame.scss'
 import { useReaderSectionFrameWidth } from '../../context/ReaderFrameWidthContext.tsx'
+import { SubsectionNavDots } from './readerNavControls/SubsectionNavDots.tsx'
 
 interface ReaderSectionFrameProps {
   children: ReactNode
@@ -29,7 +30,8 @@ export default function ReaderSectionFrame({
 
   return (
     <div ref={elementRef} id={'reader-section-frame'}>
-      {children}
+      <SubsectionNavDots />
+      <div id={'inner-reader-section-frame'}>{children}</div>
     </div>
   )
 }

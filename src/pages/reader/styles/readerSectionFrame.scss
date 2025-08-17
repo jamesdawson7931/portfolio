@@ -1,14 +1,18 @@
 #page.reader-page {
   #reading-panel {
-  #with-reader-nav-controls {
     #reader-section-frame {
-      overflow: hidden;
       position: relative;
       width: 60%;
       max-width: 60vh;
       max-height: 60vh;
       aspect-ratio: 1/1;
+      #inner-reader-section-frame {
+        overflow: hidden;
+        position: relative;
+        max-width: 60vh;
+        max-height: 60vh;
+        aspect-ratio: 1/1;
+      }
     }
-  }
   }
 }

@@ -1,0 +1,22 @@
+@use '../../../styles/theme';
+
+#reader-subsection-nav-dots {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  column-gap: 10px;
+  left: 0;
+  bottom: -20px;
+  .nav-dot {
+    width: 10px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: theme.$project-menu-gray;
+    &:hover {
+      cursor: pointer;
+    }
+    &.selected {
+      background-color: theme.$accent;
+    }
+  }
+}
