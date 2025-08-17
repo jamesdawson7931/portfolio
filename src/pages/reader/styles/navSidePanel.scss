@@ -5,3 +5,9 @@
   height: 100%;
   background-color: theme.$project-menu-gray;
 }
+
+@media (max-aspect-ratio: 1.4/1) {
+  #nav-side-panel {
+    display: none;
+  }
+}

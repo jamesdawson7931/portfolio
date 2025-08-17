@@ -1,4 +1,4 @@
-import './sectionNavDots.scss'
+import './styles/sectionNavDots.scss'
 import { useReaderIndex } from '../../../context/ReaderIndexContext.tsx'
 import cn from 'classnames'
 import React from 'react'

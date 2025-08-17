@@ -1,11 +1,11 @@
-@use '../../../styles/theme';
+@use '../../../../styles/theme';
 
 #reader-section-nav-dots {
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  row-gap: 10px;
+  row-gap: 15px;
   left: 10px;
   height: 100%;
   width: 100%;
