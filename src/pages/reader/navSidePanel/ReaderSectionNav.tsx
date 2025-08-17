@@ -16,6 +16,7 @@ export default function ReaderSectionNav({
     <div className={'reader-section-nav'}>
       <ReaderNavTitle
         title={readerIndex[sectionIndex][0]}
+        className={'reader-section-nav-title'}
         isSelected={isSelected}
         onClick={() => {
           setSectionIndex(sectionIndex)

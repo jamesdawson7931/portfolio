@@ -25,16 +25,22 @@ export default function ReaderSubsectionNav({
     <>
       {hasSubsections && (
         <div className={cn('reader-subsection-nav', expandedClass)}>
-          {subsections.slice(1).map((subsection, i) => (
-            <ReaderNavTitle
-              title={subsection}
-              isSelected={isSelectedSubsection(i)}
-              onClick={() => {
-                setCurrentReaderIndex({ section: sectionIndex, subsection: i })
-              }}
-              key={i}
-            />
-          ))}
+          {subsections.map((subsection, i) => {
+            if (i === 0) return null
+            return (
+              <ReaderNavTitle
+                title={subsection}
+                isSelected={isSelectedSubsection(i)}
+                onClick={() => {
+                  setCurrentReaderIndex({
+                    section: sectionIndex,
+                    subsection: i,
+                  })
+                }}
+                key={i}
+              />
+            )
+          })}
         </div>
       )}
     </>

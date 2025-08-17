@@ -1,0 +1,31 @@
+@use '../../../../styles/theme';
+
+.reader-nav {
+    .reader-nav-title {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      user-select: none;
+      &.clickable:hover {
+        cursor: pointer;
+      }
+      .title {
+        margin: 0;
+        color: theme.$input-gray;
+        font-size: 12px;
+        &.selected {
+          color: theme.$primary-white;
+        }
+      }
+      .nav-dot {
+        width: 10px;
+        height: 10px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: theme.$primary-gray;
+        &.selected {
+          background-color: theme.$accent;
+        }
+      }
+    }
+  }

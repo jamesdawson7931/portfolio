@@ -148,6 +148,43 @@ export function useReaderIndex() {
       }))
     }
 
+    function incrementReaderIndex() {
+      const isAtSubsectionEnd =
+        currentReaderIndex.subsection + 1 ===
+        readerIndex[currentReaderIndex.section].length
+      const isAtSectionEnd =
+        currentReaderIndex.section + 1 === readerIndex.length
+      if (isAtSectionEnd && isAtSubsectionEnd) return
+      if (!isAtSubsectionEnd) {
+        setCurrentReaderIndex((currState) => ({
+          ...currState,
+          subsection: currState.subsection + 1,
+        }))
+      } else if (isAtSubsectionEnd && !isAtSectionEnd) {
+        setCurrentReaderIndex((currState) => ({
+          subsection: 0,
+          section: currState.section + 1,
+        }))
+      }
+    }
+
+    function decrementReaderIndex() {
+      const isAtSubsectionStart = currentReaderIndex.subsection === 0
+      const isAtSectionStart = currentReaderIndex.section === 0
+      if (isAtSectionStart && isAtSubsectionStart) return
+      if (!isAtSubsectionStart) {
+        setCurrentReaderIndex((currState) => ({
+          ...currState,
+          subsection: currState.subsection - 1,
+        }))
+      } else if (isAtSubsectionStart && !isAtSectionStart) {
+        setCurrentReaderIndex((currState) => ({
+          subsection: readerIndex[currState.section - 1].length - 1,
+          section: currState.section - 1,
+        }))
+      }
+    }
+
     return {
       initReaderIndex,
       readerIndex,
@@ -159,6 +196,8 @@ export function useReaderIndex() {
       incrementSubsectionIndex,
       decrementSubsectionIndex,
       setCurrentReaderIndex,
+      incrementReaderIndex,
+      decrementReaderIndex,
     }
   }, [currentReaderIndex, readerIndex, setCurrentReaderIndex, setReaderIndex])
 }
