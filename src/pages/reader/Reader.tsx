@@ -6,6 +6,7 @@ import { ReaderSectionsStrip } from './ReaderSectionsStrip.tsx'
 import { ReaderSection } from './ReaderSection.tsx'
 import './styles/reader.scss'
 import NavSidePanel from './navSidePanel/NavSidePanel.tsx'
+import NavBottomPanel from './navBottomPanel/NavBottomPanel.tsx'
 
 export default function Reader() {
   return (
@@ -36,6 +37,7 @@ export default function Reader() {
           </ReaderSections>
         </ReaderSectionFrame>
       </ReadingPanel>
+      <NavBottomPanel articleTitle={'Lorem'} />
     </Page>
   )
 }

@@ -1,0 +1,71 @@
+@use '../../../../styles/theme';
+
+#nav-bottom-panel {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: theme.$project-menu-gray;
+  &.expanded {
+    height: 100%;
+  }
+
+  .content {
+    display: none;
+    padding-bottom: 35px;
+    &.expanded {
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  #nav-preview-bar {
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+      cursor: pointer;
+    }
+    &.expanded {
+      #nav-preview-title-container {
+        display: none;
+      }
+    }
+    #nav-preview-title-container {
+      display: flex;
+      align-items: center;
+      column-gap: 10px;
+      user-select: none;
+      .nav-dot {
+        width: 10px;
+        height: 10px;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: theme.$accent;
+      }
+      .nav-preview-title {
+        margin: 0;
+        color: theme.$input-gray;
+        font-size: 12px;
+      }
+    }
+    .caret-icon {
+      padding: 8px;
+        color: theme.$input-gray;
+      width: 35px;
+      height: 35px;
+      aspect-ratio: 1/1;
+        &.expanded {
+          transform: rotate(180deg);
+        }
+    }
+  }
+}
+
+@media (max-aspect-ratio: 1.4/1) {
+  #nav-bottom-panel {
+    display: block;
+  }
+}
