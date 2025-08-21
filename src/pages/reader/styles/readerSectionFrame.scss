@@ -16,3 +16,20 @@
     }
   }
 }
+
+@media (max-aspect-ratio: 1.4/1) {
+  #page.reader-page {
+    #reading-panel {
+      #reader-section-frame {
+        aspect-ratio: auto;
+        height: 70vh;
+        max-height: 70vh;
+        #inner-reader-section-frame {
+          aspect-ratio: auto;
+          height: 70vh;
+          max-height: 70vh;
+        }
+      }
+    }
+  }
+}
