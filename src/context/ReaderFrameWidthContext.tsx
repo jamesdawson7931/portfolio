@@ -5,35 +5,42 @@ import React, {
   useState,
 } from 'react'
 
-interface ReaderSectionFrameWidthContext {
+interface ReaderFrameDimensions {
   width: number
-  setWidth: React.Dispatch<React.SetStateAction<number>>
+  height: number
 }
 
-interface ReaderSectionFrameWidthProviderProps {
+interface ReaderSectionFrameDimensionsContext {
+  dimensions: ReaderFrameDimensions
+  setDimensions: React.Dispatch<React.SetStateAction<ReaderFrameDimensions>>
+}
+
+interface ReaderSectionFrameDimensionsProviderProps {
   children: ReactNode
 }
 
-const initialContext: ReaderSectionFrameWidthContext = {
-  width: 0,
-  setWidth: () => {},
+const initialContext: ReaderSectionFrameDimensionsContext = {
+  dimensions: { width: 0, height: 0 },
+  setDimensions: () => {},
 }
 
-const ReaderSectionFrameWidthContext =
-  createContext<ReaderSectionFrameWidthContext>(initialContext)
+const ReaderSectionFrameDimensionsContext =
+  createContext<ReaderSectionFrameDimensionsContext>(initialContext)
 
 export function ReaderSectionFrameWidthProvider({
   children,
-}: ReaderSectionFrameWidthProviderProps) {
-  const [width, setWidth] = useState(0)
+}: ReaderSectionFrameDimensionsProviderProps) {
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
   return (
-    <ReaderSectionFrameWidthContext.Provider value={{ width, setWidth }}>
+    <ReaderSectionFrameDimensionsContext.Provider
+      value={{ dimensions, setDimensions }}
+    >
       {children}
-    </ReaderSectionFrameWidthContext.Provider>
+    </ReaderSectionFrameDimensionsContext.Provider>
   )
 }
 
-export function useReaderSectionFrameWidth() {
-  return useContext(ReaderSectionFrameWidthContext)
+export function useReaderSectionFrameDimensions() {
+  return useContext(ReaderSectionFrameDimensionsContext)
 }

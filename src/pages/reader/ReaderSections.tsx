@@ -1,7 +1,7 @@
 import { type ReactNode, useEffect } from 'react'
 import './styles/readerSections.scss'
 import { useReaderIndex } from '../../context/ReaderIndexContext.tsx'
-import { useReaderSectionFrameWidth } from '../../context/ReaderFrameWidthContext.tsx'
+import { useReaderSectionFrameDimensions } from '../../context/ReaderFrameWidthContext.tsx'
 
 interface ReaderSectionsProps {
   children: ReactNode
@@ -9,8 +9,10 @@ interface ReaderSectionsProps {
 
 export function ReaderSections({ children }: ReaderSectionsProps) {
   const { initReaderIndex, currentReaderIndex } = useReaderIndex()
-  const { width } = useReaderSectionFrameWidth()
-  const topOffset = currentReaderIndex.section * -width
+  const {
+    dimensions: { width, height },
+  } = useReaderSectionFrameDimensions()
+  const topOffset = currentReaderIndex.section * -height
   const leftOffset = currentReaderIndex.subsection * -width
 
   useEffect(() => {

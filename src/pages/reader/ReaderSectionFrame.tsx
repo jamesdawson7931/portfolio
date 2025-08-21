@@ -1,6 +1,6 @@
 import { type ReactNode, useEffect, useRef } from 'react'
 import './styles/readerSectionFrame.scss'
-import { useReaderSectionFrameWidth } from '../../context/ReaderFrameWidthContext.tsx'
+import { useReaderSectionFrameDimensions } from '../../context/ReaderFrameWidthContext.tsx'
 import { SubsectionNavDots } from './readerNavControls/SubsectionNavDots.tsx'
 
 interface ReaderSectionFrameProps {
@@ -11,20 +11,23 @@ export default function ReaderSectionFrame({
   children,
 }: ReaderSectionFrameProps) {
   const elementRef = useRef<HTMLDivElement>(null)
-  const { setWidth } = useReaderSectionFrameWidth()
+  const { setDimensions } = useReaderSectionFrameDimensions()
 
-  function updateFrameWidth() {
+  function updateFrameDimensions() {
     if (elementRef.current) {
-      return setWidth(elementRef.current.getBoundingClientRect().width)
+      setDimensions({
+        height: elementRef?.current?.getBoundingClientRect().height || 0,
+        width: elementRef?.current?.getBoundingClientRect().width || 0,
+      })
     }
   }
 
   useEffect(() => {
-    updateFrameWidth()
-    window.addEventListener('resize', updateFrameWidth)
+    updateFrameDimensions()
+    window.addEventListener('resize', updateFrameDimensions)
 
     return () => {
-      window.removeEventListener('resize', updateFrameWidth)
+      window.removeEventListener('resize', updateFrameDimensions)
     }
   }, [])
 

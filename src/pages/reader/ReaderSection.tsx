@@ -1,16 +1,28 @@
 import type { ReactNode } from 'react'
-import { useReaderSectionFrameWidth } from '../../context/ReaderFrameWidthContext.tsx'
+import { useReaderSectionFrameDimensions } from '../../context/ReaderFrameWidthContext.tsx'
+import cn from 'classnames'
 
 export interface ReaderSectionProps {
   title: string
   children?: ReactNode
+  className?: string
 }
 
-export function ReaderSection({ title, children }: ReaderSectionProps) {
-  const { width } = useReaderSectionFrameWidth()
+export function ReaderSection({
+  title,
+  children,
+  className,
+}: ReaderSectionProps) {
+  const {
+    dimensions: { width, height },
+  } = useReaderSectionFrameDimensions()
+  const sectionTitleClass = `${title.toLowerCase().split(' ').join('-')}-section`
   return (
-    <div className={'reader-section'} style={{ width }}>
-      <p className={'title'}>{title}</p>
+    <div
+      className={cn('reader-section', sectionTitleClass, className)}
+      style={{ width, height }}
+    >
+      {children}
     </div>
   )
 }

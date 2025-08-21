@@ -10,6 +10,7 @@ import GetInTouchSent from './pages/GetInTouchSent.tsx'
 import Reader from './pages/reader/Reader.tsx'
 import { ReaderSectionFrameWidthProvider } from './context/ReaderFrameWidthContext.tsx'
 import { ReaderIndexProvider } from './context/ReaderIndexContext.tsx'
+import Lorem from './articles/Lorem.tsx'
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,10 @@ const router = createBrowserRouter([
       { path: '/getintouch', element: <GetInTouch /> },
       { path: '/getintouch/sent', element: <GetInTouchSent /> },
       { path: '/projects', element: <Projects /> },
-      { path: '/projects/:projectName', element: <Reader /> },
+      {
+        path: '/projects/lorem',
+        element: <Reader article={<Lorem />} articleTitle={'Lorem'} />,
+      },
     ],
   },
 ])
